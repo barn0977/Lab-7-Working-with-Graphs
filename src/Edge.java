@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Edge {
     private Vertex from;
     private Vertex to;

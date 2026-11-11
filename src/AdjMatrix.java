@@ -2,11 +2,11 @@ import java.util.ArrayList;
 
 public class AdjMatrix extends Graphs{
 
-    private int[][] matrix;
+    private double[][] matrix;
 
     public AdjMatrix() {
         this.vertices = new ArrayList<Vertex>();
-        matrix = new int[0][0];
+        matrix = new double[0][0];
     }
 
     @Override
@@ -20,7 +20,7 @@ public class AdjMatrix extends Graphs{
             vertices.add(newVertex);
 
             int size = vertices.size();
-            int[][] newMatrix = new int[size][size];
+            double[][] newMatrix = new double[size][size];
 
             for (int x = 0; x < size - 1; x++) {
                 for (int y = 0; y < size - 1; y++) {
@@ -41,8 +41,8 @@ public class AdjMatrix extends Graphs{
         int startIndex = vertices.indexOf(start);
         int goalIndex = vertices.indexOf(goal);
 
-        matrix[startIndex][goalIndex] = (int) weight;
-        matrix[goalIndex][startIndex] = (int) weight;
+        matrix[startIndex][goalIndex] = weight;
+        matrix[goalIndex][startIndex] = weight;
 
     }
 
@@ -70,7 +70,7 @@ public class AdjMatrix extends Graphs{
     }
     public Vertex nameVertex(String name) {
         for (Vertex vertex: vertices) {
-          if ( vertex.getName().equals(name)) {
+          if (vertex.getName().equals(name)) {
             return vertex;
             }
         }

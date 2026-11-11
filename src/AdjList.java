@@ -1,5 +1,10 @@
+import java.util.ArrayList;
+
 public class AdjList extends Graphs{
 
+    public AdjList() {
+        this.vertices = new ArrayList<>();
+    }
 
     @Override
     public Vertex addVertex(String name) {
@@ -11,9 +16,10 @@ public class AdjList extends Graphs{
         }
         else {
             newVertex = new Vertex(name);
+            vertices.add(newVertex);
         }
 
-        vertices.add(newVertex);
+
         return newVertex;
     }
 
@@ -35,11 +41,13 @@ public class AdjList extends Graphs{
         for (Vertex vertex: vertices) {
             System.out.println("-" + vertex.getName() + "-");
             for (Edge edge: vertex.getEdges()) {
-                System.out.println("Vertex Identification " + edge.toString());
-                System.out.println("Vertex From" + edge.getFrom().getName());
+                //This isn't truly necessary but just shows the heap storage of what previous vertex its coming from
+                //This is a good way to check that it's pulling from the correct Vertex in the graph
+//                System.out.println("\nVertex Identification " + edge.toString());
+                System.out.println("Vertex From " + edge.getFrom().getName());
                 System.out.println("Vertex Destination " +edge.getTo().getName());
                 System.out.println("Edge Weight " + edge.getWeight());
-                System.out.println("\n ---------------------------------------");
+                System.out.print("\n --------------------------------------- \n");
             }
 
         }

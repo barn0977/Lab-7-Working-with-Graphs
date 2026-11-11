@@ -7,7 +7,7 @@ public class Vertex {
 
     public Vertex(String n) {
         this.name = n;
-        this.edges = new ArrayList<Edge>();
+        this.edges = new ArrayList<>();
     }
 
 
