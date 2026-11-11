@@ -18,7 +18,7 @@ public class BreadthFirst {
 
         while (!queue.isEmpty()) {
             Vertex current = queue.poll();
-            System.out.print(current.getName() + " --> ");
+            System.out.print(current.getName() + " ");
 
             for (Edge edge: current.getEdges()) {
                 Vertex neighbor;

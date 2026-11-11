@@ -28,11 +28,11 @@ public class Main {
                 boolean success = reader.readGraph(filePath, adjL, adjM);
 
                 if (success) {
-                    System.out.println("The Adjacency List");
+                    System.out.println("_______The_Adjacency_List_______");
                     adjL.printGraph();
-                    System.out.println("The Adjacency Matrix");
+                    System.out.println("_______The_Adjacency_Matrix_______");
                     adjM.printGraph();
-                    System.out.println("THe Breadth First Search");
+                    System.out.println("_______The_Breadth_First_Search_______");
                     String startVertex = reader.getStartVertex(adjL);
                     BreadthFirst.BreadthFirstSearch(adjL, startVertex);
                     System.out.println();
